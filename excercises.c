@@ -17,11 +17,8 @@ main(){
     upper = 330;
     step = 20;
 
-    celsius = lower;
 
-    while (fahr <= upper){
-        fahr = (celsius * (9.0/5.0)) + 32;
-        printf("%f\t%f\n", celsius,fahr);
-        celsius = celsius + step;
+    for (celsius = upper; celsius >= lower; celsius = celsius - step){
+        printf("%f\t%f\n", celsius,(celsius * (9.0/5.0)) + 32);
     }
 }
