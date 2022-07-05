@@ -9,7 +9,7 @@
 
 
 main(){
-    printf("This is the table of conversion for Fahrenheit to Celsius\n\n\n\n\n\n\n\n");
+    printf("This is the table of conversion for Celsius to Fahrenheit\n\n\n\n\n\n\n\n");
     float fahr, celsius;
     int lower, upper,step;
 
@@ -17,11 +17,11 @@ main(){
     upper = 330;
     step = 20;
 
-    fahr = lower;
+    celsius = lower;
 
     while (fahr <= upper){
-        celsius = (5.0/9.0)*(fahr-32.0);
-        printf("%f\t%f\n", fahr,celsius);
-        fahr = fahr + step;
+        fahr = (celsius * (9.0/5.0)) + 32;
+        printf("%f\t%f\n", celsius,fahr);
+        celsius = celsius + step;
     }
 }
